@@ -10,7 +10,7 @@ bot.login(process.env.BOT_TOKEN);
 /*const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
-client.login("MzMxNTE1NDc4NzYzNzY1NzYw.DDwrYA.kGYkOmhg8fNHgYpmeFbo8Gvb7ks");
+client.login("");
 
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 let money = JSON.parse(fs.readFileSync("./money.json", "utf8"));
