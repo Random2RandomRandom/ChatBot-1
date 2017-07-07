@@ -5,7 +5,7 @@ bot.registry.registerGroup('random','Random');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
-bot.login('MzMxNTE1NDc4NzYzNzY1NzYw.DDwrYA.kGYkOmhg8fNHgYpmeFbo8Gvb7ks');
+bot.login(process.env.BOT_TOKEN);
 
 /*const Discord = require("discord.js");
 const fs = require("fs");
