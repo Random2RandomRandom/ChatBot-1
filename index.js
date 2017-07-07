@@ -1,12 +1,24 @@
-const commando = require('discord.js-commando');
-const bot = new commando.Client();
-const fs = require("fs");
-bot.registry.registerGroup('random','Random');
-bot.registry.registerDefaults();
-bot.registry.registerCommandsIn(__dirname + "/commands");
+//const commando = require('discord.js-commando');
+//const bot = new commando.Client();
+//const fs = require("fs");
+//bot.registry.registerGroup('random','Random');
+//bot.registry.registerDefaults();
+//bot.registry.registerCommandsIn(__dirname + "/commands");
 
-bot.login(process.env.BOT_TOKEN);
+//bot.login(process.env.BOT_TOKEN);
 
+// Requires
+const Discord = require('discord.js')
+
+// Create an instance of a Discord client
+const client = new Discord.Client()
+
+// The bot is ready
+client.on('ready', () => {
+  console.log('Bot Started')
+})
+
+client.login(process.env.BOT_TOKEN)
 /*const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
