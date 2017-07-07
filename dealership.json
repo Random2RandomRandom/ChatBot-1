@@ -1,0 +1,12 @@
+{
+    "0": {
+        "model": "Lamborghini Huracan Spyder",
+        "img": "http://st.automobilemag.com/uploads/sites/10/2016/06/2016-lamborghini-huracan-lp6104-coupe-side-view.png",
+        "price": 120000
+    },
+       "1": {
+        "model": "2016 Mercedes Benz CLS 400 Sedan",
+        "img": "http://st.motortrend.com/uploads/sites/10/2015/11/2016-mercedes-benz-cls-400-sedan-side-view.png",
+        "price": 120000
+    }
+}
