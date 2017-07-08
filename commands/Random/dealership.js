@@ -26,15 +26,14 @@ class DealershipCommand extends commando.Command {
             });
         }
         else {
-            
-            /*message.channel.send("\n" + DataDealership[0].model + " Price: $" + DataDealership[0].price, { file: DataDealership[0].img });
-            message.channel.send("\n" + DataDealership[1].model + " Price: $" + DataDealership[1].price, { file: DataDealership[1].img });*/
+            message.channel.send("\n" + DataDealership[0].model + " Price: $" + DataDealership[0].price, { file: DataDealership[0].img });
+            /*message.channel.send("\n" + DataDealership[1].model + " Price: $" + DataDealership[1].price, { file: DataDealership[1].img });*/
             const embed = new Discord.RichEmbed() .setTitle("Test BOT // LETS GOO") .setColor();
             var str = "";
             DataDealership.forEach(function(e){
               str += "\n"+e.model + " Price: $" + e.price;
               str += "\n" + e.img;
-            }); embed.setDescription(string);
+            }); embed.setDescription(str);
             message.channel.send({embed});
             console.log(str);console.log(embed);
         }
