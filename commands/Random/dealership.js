@@ -32,8 +32,8 @@ class DealershipCommand extends commando.Command {
             const embed = new Discord.RichEmbed() .setTitle("Test BOT // LETS GOO") .setColor();
             var str = "";
             DataDealership.forEach(function(e){
-              str += "\n"+DataDealership[1].model + " Price: $" + DataDealership[1].price;
-              str += "\n" + DataDealership[1].img;
+              str += "\n"+e.model + " Price: $" + e.price;
+              str += "\n" + e.img;
             }); embed.setDescription(string);
             message.channel.send({embed});
         }
