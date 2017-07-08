@@ -9,6 +9,7 @@ class DealershipCommand extends commando.Command {
             description: 'dealership'
         });
     }
+    
     async run(message, args) {
         let deal_command = args.split(' ');
         let dealership = JSON.parse(fs.readFileSync("./dealership.json", "utf8"));
@@ -25,8 +26,16 @@ class DealershipCommand extends commando.Command {
             });
         }
         else {
-            message.channel.send("\n" + DataDealership[0].model + " Price: $" + DataDealership[0].price, { file: DataDealership[0].img });
-            message.channel.send("\n" + DataDealership[1].model + " Price: $" + DataDealership[1].price, { file: DataDealership[1].img });
+            
+            /*message.channel.send("\n" + DataDealership[0].model + " Price: $" + DataDealership[0].price, { file: DataDealership[0].img });
+            message.channel.send("\n" + DataDealership[1].model + " Price: $" + DataDealership[1].price, { file: DataDealership[1].img });*/
+            const embed = new Discord.RichEmbed() .setTitle("Test BOT // LETS GOO") .setColor();
+            var str = "";
+            DataDealership.forEach(function(e){
+              str += "\n"+DataDealership[1].model + " Price: $" + DataDealership[1].price;
+              str += "\n" + DataDealership[1].img;
+            }); embed.setDescription(string);
+            message.channel.send({embed});
         }
     }
 }
