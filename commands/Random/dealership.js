@@ -36,6 +36,7 @@ class DealershipCommand extends commando.Command {
               str += "\n" + e.img;
             }); embed.setDescription(string);
             message.channel.send({embed});
+            console.log(str);console.log(embed);
         }
     }
 }
