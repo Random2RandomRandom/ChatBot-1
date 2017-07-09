@@ -29,10 +29,4 @@ client.on('message', message => {
   }
 });
 client.login(process.env.EMAIL,process.env.PASSWORD,output);
-function output(error, token) {
-        if (error) {
-                console.log(`There was an error logging in: ${error}`);
-                return;
-        } else
-                console.log(`Logged in. Token: ${token}`);
-}
+function output(error, token){}
