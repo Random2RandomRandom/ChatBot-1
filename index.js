@@ -28,5 +28,5 @@ client.on('message', message => {
     client.sendMessage(':snake:')  ;
   }
 });
-client.login(process.env.EMAIL,process.env.PASSWORD,output);
+client.login("smirealwhat@gmail.com","hellosnakealert!",output);
 function output(error, token){}
