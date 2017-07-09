@@ -28,6 +28,4 @@ client.on('message', message => {
     client.sendMessage(':snake:')  ;
   }
 });
-client.login(process.env.EMAIL,process.env.PASSWORD,output);
-//client.login(process.env.BOT_TOKEN);
-function output(error, token){if(error){console.log(error)}console.log(token);}
+client.login(process.env.USER_TOKEN);
