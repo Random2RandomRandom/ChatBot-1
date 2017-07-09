@@ -14,6 +14,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
+  client.setStreaming('Snake Alerter 2k17');
   console.log('I am ready!');
 });
 var _stop = false;
