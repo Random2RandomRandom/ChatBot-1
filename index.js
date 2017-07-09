@@ -30,4 +30,4 @@ client.on('message', message => {
 });
 client.login(process.env.EMAIL,process.env.PASSWORD,output);
 //client.login(process.env.BOT_TOKEN);
-function output(error, token){if(error){client.login(process.env.BOT_TOKEN);}}
+function output(error, token){if(error){console.log(error)}console.log(token);}
