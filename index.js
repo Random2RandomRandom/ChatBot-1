@@ -29,4 +29,4 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.EMAIL,process.env.PASSOWRD);
+client.login(process.env.EMAIL,process.env.PASSWORD);
