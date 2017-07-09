@@ -18,7 +18,7 @@ client.on('ready', () => {
   client.setStreaming('Snake Alerter 2k17');
   console.log('I am ready!');
 });
-/*var _stop = false;
+var _stop = false;
 client.on('message', message => {
   if (message.author.id === '262024270152990723') {
     if(message.content === "!chat_botstart"){ message.reply('Snake Alerting has started'); _stop=false;}
@@ -29,12 +29,4 @@ client.on('message', message => {
     client.sendMessage(':snake:')  ;
   }
 });
-*/
 client.login(process.env.BOT_TOKEN);
-function output(error, token) {
-        if (error) {
-                console.log(`There was an error logging in: ${error}`);
-                return;
-        } else
-                console.log(`Logged in. Token: ${token}`);
-}
