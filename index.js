@@ -23,8 +23,8 @@ client.on('message', message => {
     if(message.content === "!chat_botstart"){ message.reply('Snake Alerting has started'); _stop=false;}
     else if(message.content === "!chat_botstop"){ message.reply('Snake Alerting has stopped'); _stop=true;}
   }
-  else if (message.author.id === '303733714381307904' || message.author.id==="292613692674277377") {
-    //if(_stop == true){console.log("stopped");return;}
+  if(_stop == true){console.log("stopped");return;}
+  if (message.author.id === '303733714381307904' || message.author.id==="292613692674277377") {
     message.reply(':snake:')  ;
     console.log("send");
   }
