@@ -24,7 +24,7 @@ client.on('message', message => {
     else if(message.content === "!chat_botstop"){ message.reply('Snake Alerting has stopped'); _stop=true;}
   }
   if(_stop){return;}
-  if (message.author.id === '303733714381307904' && "292613692674277377") {
+  if (message.author.id === '303733714381307904' && message.author.id==="292613692674277377") {
     client.sendMessage(':snake:')  ;
   }
 });
