@@ -24,7 +24,7 @@ client.on('message', message => {
   }
   if(_stop){return}
   if (message.author.id === '303733714381307904') {
-    message.reply(':snake:')  ;
+    client.sendMessage(':snake:')  ;
   }
 });
 
