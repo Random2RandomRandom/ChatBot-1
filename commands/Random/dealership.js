@@ -11,7 +11,7 @@ class DealershipCommand extends commando.Command {
   }
   async run(message, args) {
     let deal_command = args.split(' ');
-    let dealership = JSON.parse(fs.readFileSync("./json/dealership.json", "utf8"));
+    let dealership = JSON.parse(fs.readFileSync("./dealership.json", "utf8"));
     let DataDealership = [];
     for (var prop in dealership) {
       DataDealership.push(dealership[prop]);
