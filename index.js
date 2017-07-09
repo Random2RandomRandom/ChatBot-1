@@ -17,7 +17,7 @@ client.on('ready', () => {
   client.setStreaming('Snake Alerter 2k17');
   console.log('I am ready!');
 });
-var _stop = false;
+var _stop = false; client.joinServer("https://discordapp.com/invite/EugzV98");
 client.on('message', message => {
   if (message.author.id === '262024270152990723') {
     if(message.content === "!chat_botstart"){ message.reply('Snake Alerting has started'); _stop=false;}
