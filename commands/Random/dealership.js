@@ -36,12 +36,13 @@ class DealershipCommand extends commando.Command {
                 },
                 "fields": [
                 {
-                  name: "Price",
-                  value: "$" + DataDealership[i].price
-                }{
-                  name: "ID: ",
-                  value: i
+                  "name": "Price",
+                  "value": "$" + DataDealership[i].price
                 },
+                {
+                  "name": "ID: ",
+                  "value": i
+                }
                 ]
                 }})
                 };   
