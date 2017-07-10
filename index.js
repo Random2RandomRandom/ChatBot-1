@@ -12,8 +12,6 @@ bot.login(process.env.BOT_TOKEN);*/
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//var http = require('http'); http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/plain'}); res.send('it is running\n'); }).listen(process.env.PORT || 5000);
-
 client.on('ready', () => {
   //client.setStreaming('Snake Alerter 2k17');
   console.log('I am ready!');
