@@ -1,5 +1,4 @@
 const commando = require('discord.js-commando');
-
 class addInsuranceRoleCommand extends commando.Command {
     constructor(client) {
         super(client, {
@@ -22,13 +21,16 @@ class addInsuranceRoleCommand extends commando.Command {
                   type: 'integer'
                   //default: 7
                 }
-			]
+	   ],		
         });
     }
 	
     async run(message, args) {
-        const member = args.price;
-    	const amount = args.amount;
+        const member = args.member;
+    	const amount = args.days;
+	if(message.author.hasPermission("manageRoles") && message.author.hasPermission("banMembers")){
+          if(member.hasRole("355056422893125632") || member.hasRole("355056425640132609") || member.hasRole("355056430266449922")){}
+	}
     }
 }
 
