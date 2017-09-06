@@ -42,6 +42,7 @@ bot.registry.registerCommandsIn(__dirname + "/commands");
 
 var connectionString = process.env.DATABASE_URL;
 client.on('ready', () => {
+  console.log("test");
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
   client.query("CREATE TABLE IF NOT EXISTS 
