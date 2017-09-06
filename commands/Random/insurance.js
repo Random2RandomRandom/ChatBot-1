@@ -27,9 +27,13 @@ class addInsuranceRoleCommand extends commando.Command {
 	
     async run(message, args) {
         const member = args.member;
-    	const amount = args.days;
-	if(message.author.hasPermission("manageRoles") && message.author.hasPermission("banMembers")){
-          if(member.hasRole("355056422893125632") || member.hasRole("355056425640132609") || member.hasRole("355056430266449922")){}
+    	let amount= args.days;
+	if(message.author.hasPermission("MANAGE_ROLES_OR_PERMISSIONS") && message.author.hasPermission("BAN_MEMBERS")){
+          if(member.hasRole("355056422893125632") || member.hasRole("355056425640132609") || member.hasRole("355056430266449922")){
+		return msg.reply("User already has insurance");
+	  }
+	if(amount > 30){amount=30;}
+		
 	}
     }
 }
