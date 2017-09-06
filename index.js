@@ -44,8 +44,9 @@ client.on('ready', () => {
   console.log("test");
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
-  client.query("CREATE DATABASE IF NOT EXISTS `globaldb`)");
-  client.query("CREATE TABLE IF NOT EXISTS 
+  
+  client.query("CREATE DATABASE  `globaldb`)");
+  client.query("CREATE TABLE
     `globaldb.insurance` (     
       userid VARCHAR(22) NOT NULL,
       `roleid` VARCHAR(22) NOT NULL,
