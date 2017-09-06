@@ -46,12 +46,12 @@ client.on('ready', () => {
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
   client.query("CREATE TABLE IF NOT EXISTS 
-    insurance (
-      userid int NOT NULL,
-      roleid int NOT NULL,
-      added_byid int NOT NULL,
-      createdAt date NOT NULL,
-      removeAt date NOT NULL,
+    insurance (     
+      userid VARCHAR(22) NOT NULL,
+      roleid VARCHAR(22) NOT NULL,
+      added_byid VARCHAR(22 NOT NULL,
+      createdAtDate date NOT NULL,
+      removeAtDate date NOT NULL,
       PRIMARY KEY (`userid`,`roleid`)
   )");
 });
