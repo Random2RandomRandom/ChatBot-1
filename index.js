@@ -40,18 +40,17 @@ bot.registry.registerGroup('random', 'Random');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
-
 var connectionString = process.env.DATABASE_URL;
 client.on('ready', () => {
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
   client.query("CREATE TABLE IF NOT EXISTS 
-    insurance (     
+    `insurance` (     
       userid VARCHAR(22) NOT NULL,
-      roleid VARCHAR(22) NOT NULL,
-      added_byid VARCHAR(22),
-      createdAtDate date NOT NULL,
-      removeAtDate date NOT NULL,
+      `roleid` VARCHAR(22) NOT NULL,
+      `added_byid` VARCHAR(22),
+      `createdAtDate` date NOT NULL,
+      `removeAtDate` date NOT NULL,
       PRIMARY KEY (`userid`,`roleid`)
   )");
 });
