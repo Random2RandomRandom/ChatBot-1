@@ -26,8 +26,8 @@ class addTempRoleCommand extends commando.Command {
 	   			,{
 				  key: 'days',
 				  prompt: 'how many days should it last?',
-				  type: 'integer'
-				  //default: 7
+				  type: 'integer',
+				  default: 7
 				}
 			],		
         });
