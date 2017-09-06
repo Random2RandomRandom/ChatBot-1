@@ -4,6 +4,7 @@ class addInsuranceRoleCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'addinsurance',
+	    guildOnly: true,
             group: 'random',
             memberName: 'insurance',
 			description: 'Add insurance to user!.Default is 7 days.',
@@ -24,9 +25,10 @@ class addInsuranceRoleCommand extends commando.Command {
 			]
         });
     }
+	
     async run(message, args) {
-        var roll = Math.floor(Math.random()*6) +1;
-        message.reply("You rolled a " + roll);
+        const member = args.price;
+    	const amount = args.amount;
     }
 }
 
