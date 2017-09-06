@@ -34,7 +34,7 @@ class addInsuranceRoleCommand extends commando.Command {
 	  }
 	if(amount > 30){amount=30;}
 		
-	}else{return msg.reply("You don't have the right permissions[BAN,MANAGE ROLES]");}
+	}else{ return msg.reply("You don't have the right permissions[BAN,MANAGE ROLES]");}
     }
 }
 
