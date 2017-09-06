@@ -10,7 +10,6 @@
     "node": "7.6.0"
   },
   "author": "",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^11",
     "db.js": "^0.15.0",
