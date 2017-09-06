@@ -4,7 +4,7 @@ class addInsuranceRoleCommand extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'addinsurance',
-            group: 'group_insurance',
+            group: 'random',
             memberName: 'insurance',
 			description: 'Add insurance to user!.Default is 7 days.',
 			examples: ['addinsurance @Crawl#3208 7', 'addinsurance Crawl'],
