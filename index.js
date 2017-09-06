@@ -39,14 +39,14 @@ bot.registry.registerGroup('random', 'Random');
 
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
-
 var connectionString = process.env.DATABASE_URL;
 client.on('ready', () => {
   console.log("test");
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
+  client.query("CREATE DATABASE IF NOT EXISTS `globaldb`)");
   client.query("CREATE TABLE IF NOT EXISTS 
-    `insurance` (     
+    `globaldb.insurance` (     
       userid VARCHAR(22) NOT NULL,
       `roleid` VARCHAR(22) NOT NULL,
       `added_byid` VARCHAR(22),
