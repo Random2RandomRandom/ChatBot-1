@@ -49,7 +49,7 @@ client.on('ready', () => {
     insurance (     
       userid VARCHAR(22) NOT NULL,
       roleid VARCHAR(22) NOT NULL,
-      added_byid VARCHAR(22 NOT NULL,
+      added_byid VARCHAR(22),
       createdAtDate date NOT NULL,
       removeAtDate date NOT NULL,
       PRIMARY KEY (`userid`,`roleid`)
