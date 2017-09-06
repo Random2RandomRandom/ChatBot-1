@@ -34,7 +34,7 @@ class addTempRoleCommand extends commando.Command {
     }
 	
 	
-    async run(message, args) {
+    async run(msg, args) {
 	const role = args.role;
         const member = args.member;
     	var amount= args.days;
@@ -47,20 +47,20 @@ class addTempRoleCommand extends commando.Command {
 	
 	var new_date = new Date();
 	new_date.setDate(new_date.getDate() + amount);
-	new_date.toISOString().substring(0, 10);
-
+	new_date = new_date.toISOString().substring(0, 10);
+	var today = new Date(); today = today.toISOString().substring(0, 10);
 	
 	var client = new pg.Client(connectionString);
         client.connect();
         console.log("Connected to Mysql");
-        client.query('INSERT INTO insurance_dates(`userid`,`roleid`,`removeDate`) VALUES($1,$2,$3)', [member.id,role.id,new_date], function (err, result) {
+        client.query('INSERT INTO insurance(`userid`,`roleid`,`removeAtDate`) VALUES($1,$2,$3) ON DUPLICATE UPDATE `removeAtDate`=$3,`createdAtDate`=$5,`added_byid`=$6 ', [member.id,role.id,new_date,1,today,message.author.id], function (err, result) {
             if (err) {
                 console.error(err);
             }
             else{
 		    console.log(result);
 		    member.addRole(role.id,"Insurance for "+amount+" days");
-		    message.reply("You've added the insurance to $1",member.username);
+		    msg.reply("You've added the insurance to $1",member.username);
 		    console.log("end");
 		    client.end();
 	    }
