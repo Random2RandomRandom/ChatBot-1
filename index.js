@@ -34,7 +34,7 @@ const commando = require('discord.js-commando');
 const bot = new commando.Client();
 const fs = require("fs");
 var pg = require("pg");
-bot.registry.registerGroup('group_insurance', 'Insurance');
+bot.registry.registerGroup('random', 'Random');
 
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
