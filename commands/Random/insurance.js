@@ -53,7 +53,7 @@ class addTempRoleCommand extends commando.Command {
 	var client = new pg.Client(process.env.DATABASE_URL);
         client.connect();
         console.log("Connected to Mysql");
-        client.query('INSERT INTO insurance(userid,roleid,removeAtDate,createdAtDate,added_byid) VALUES($1,$2,$3,$5,$6) ON CONFLICT(userid,roleid) DO UPDATE SET removeAtDate=$3,createdAtDate=$5,added_byid=$6 ', [member.id,role.id,new_date,1,today,msg.author.id], function (err, result) {
+        client.query('INSERT INTO insurance(userid,roleid,removeAtDate,createdAtDate,added_byid) VALUES($1,$2,$3,$4,$5) ON CONFLICT(userid,roleid) DO UPDATE SET removeAtDate=$3,createdAtDate=$4,added_byid=$5 ', [member.id,role.id,new_date,today,msg.author.id], function (err, result) {
             if (err) {
                 console.error(err);
             }
