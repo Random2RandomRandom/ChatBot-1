@@ -39,7 +39,7 @@ class addTempRoleCommand extends commando.Command {
         const member = args.member;
     	var amount= args.days;
 	if(!role.id || !member.id){return;}
-	if(msg.member.has('MANAGE_ROLES') && msg.member.has('BAN_MEMBERS')){
+	if(msg.member.hasPermission('MANAGE_ROLES') && msg.member.hasPermission('BAN_MEMBERS')){
           if(member.hasRole(role.id)){
 		return msg.reply("User already has ${role.name} insurance!");
 	  }
