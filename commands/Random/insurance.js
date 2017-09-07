@@ -49,7 +49,7 @@ class addTempRoleCommand extends commando.Command {
 	new_date.setDate(new_date.getDate() + amount);
 	new_date = new_date.toISOString().substring(0, 10);
 	var today = new Date(); today = today.toISOString().substring(0, 10);
-	
+	var pg = require("pg");
 	var client = new pg.Client(connectionString);
         client.connect();
         console.log("Connected to Mysql");
