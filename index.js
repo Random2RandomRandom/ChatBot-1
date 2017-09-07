@@ -32,7 +32,7 @@ client.login(process.env.USER_TOKEN);
 */
 
 const commando = require('discord.js-commando');
-const bot = new Commando.Client({
+const bot = new commando.Client({
     owner: '262024270152990723'
 });
 const fs = require("fs");
