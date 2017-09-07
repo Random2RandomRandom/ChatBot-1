@@ -44,10 +44,8 @@ bot.on('ready', () => {
   console.log("test");
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
-  
-  
+
   client.query('CREATE TABLE IF NOT EXISTS insurance (userid VARCHAR(22) NOT NULL,roleid VARCHAR(22) NOT NULL,added_byid VARCHAR(22),createdAtDate date NOT NULL,removeAtDate date NOT NULL,PRIMARY KEY (userid,roleid)',[1],function(err,result) {
-           done(); // closing the connection;
            if(err){
                console.log(err); return;
            }
