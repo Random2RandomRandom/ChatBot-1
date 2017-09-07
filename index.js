@@ -48,7 +48,7 @@ client.on('ready', () => {
   
   client.query('CREATE DATABASE IF NOT EXISTS `globaldb`');
   client.query('CREATE TABLE IF NOT EXISTS `globaldb`.`insurance` (     
-      userid VARCHAR(22) NOT NULL,
+      `userid` VARCHAR(22) NOT NULL,
       `roleid` VARCHAR(22) NOT NULL,
       `added_byid` VARCHAR(22),
       `createdAtDate` date NOT NULL,
