@@ -39,7 +39,7 @@ class addTempRoleCommand extends commando.Command {
         const member = args.member;
     	var amount= args.days;
 	if(!role.id || !member.id){return;}
-	if(message.author.hasPermission("MANAGE_ROLES") && message.author.hasPermission("BAN_MEMBERS")){
+	if(msg.author.hasPermission("MANAGE_ROLES") && msg.author.hasPermission("BAN_MEMBERS")){
           if(member.hasRole(role.id)){
 		return msg.reply("User already has ${role.name} insurance!");
 	  }
@@ -53,7 +53,7 @@ class addTempRoleCommand extends commando.Command {
 	var client = new pg.Client(connectionString);
         client.connect();
         console.log("Connected to Mysql");
-        client.query('INSERT INTO insurance(`userid`,`roleid`,`removeAtDate`,`createdAtDate`,`added_byid`) VALUES($1,$2,$3,$5,$6) ON DUPLICATE UPDATE `removeAtDate`=$3,`createdAtDate`=$5,`added_byid`=$6 ', [member.id,role.id,new_date,1,today,message.author.id], function (err, result) {
+        client.query('INSERT INTO insurance(userid,roleid,removeAtDate,createdAtDate,added_byid) VALUES($1,$2,$3,$5,$6) ON DUPLICATE UPDATE removeAtDate=$3,createdAtDate=$5,added_byid=$6 ', [member.id,role.id,new_date,1,today,msg.author.id], function (err, result) {
             if (err) {
                 console.error(err);
             }
