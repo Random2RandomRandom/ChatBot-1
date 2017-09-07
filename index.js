@@ -37,6 +37,7 @@ const fs = require("fs");
 var pg = require("pg");
 bot.registry.registerGroup('random', 'Random');
 
+
 var connectionString = process.env.DATABASE_URL;
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
