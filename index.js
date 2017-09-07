@@ -46,7 +46,7 @@ bot.registry.registerCommandsIn(__dirname + "/commands");
   client.connect();
   
   client.query('CREATE DATABASE IF NOT EXISTS `globaldb`');
-  /*client.query('CREATE TABLE IF NOT EXISTS `globaldb`.`insurance` (     
+  client.query('CREATE TABLE IF NOT EXISTS `globaldb`.`insurance` (     
       `userid` VARCHAR(22) NOT NULL,
       `roleid` VARCHAR(22) NOT NULL,
       `added_byid` VARCHAR(22),
@@ -54,7 +54,7 @@ bot.registry.registerCommandsIn(__dirname + "/commands");
       `removeAtDate` date NOT NULL,
       PRIMARY KEY (`userid`,`roleid`)
     )'
-  );*/
+  );
 });
 */
 //var http = require('http'); http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/plain'}); res.send('it is running\n'); }).listen(process.env.PORT || 5000);
