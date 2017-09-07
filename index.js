@@ -49,10 +49,8 @@ bot.on('ready', () => {
   client.query('CREATE TABLE IF NOT EXISTS insurance (userid VARCHAR(22) NOT NULL,roleid VARCHAR(22) NOT NULL,added_byid VARCHAR(22),createdAtDate date NOT NULL,removeAtDate date NOT NULL,PRIMARY KEY (userid,roleid)',[1],function(err,result) {
            done(); // closing the connection;
            if(err){
-               console.log(err);
-               res.status(400).send(err);
+               console.log(err); return;
            }
-           res.status(200).send(result.rows);
        });  
 });
 //var http = require('http'); http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/plain'}); res.send('it is running\n'); }).listen(process.env.PORT || 5000);
