@@ -45,7 +45,7 @@ bot.on('ready', () => {
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
   
-  client.query('CREATE DATABASE IF NOT EXISTS `globaldb`');
+  
   client.query('
     CREATE TABLE IF NOT EXISTS insurance (     
       userid VARCHAR(22) NOT NULL,
