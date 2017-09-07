@@ -40,7 +40,7 @@ bot.registry.registerGroup('random', 'Random');
 var connectionString = process.env.DATABASE_URL;
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
-client.on('ready', () => {
+bot.on('ready', () => {
   console.log("test");
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
