@@ -37,26 +37,25 @@ const fs = require("fs");
 var pg = require("pg");
 bot.registry.registerGroup('random', 'Random');
 
-
 var connectionString = process.env.DATABASE_URL;
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
-/*bot.on('ready', () => {
+bot.on('ready', () => {
   console.log("test");
   var client = new pg.Client(process.env.DATABASE_URL);
   client.connect();
   
   client.query('CREATE DATABASE IF NOT EXISTS `globaldb`');
-  client.query('CREATE TABLE IF NOT EXISTS `globaldb`.`insurance` (     
-      `userid` VARCHAR(22) NOT NULL,
-      `roleid` VARCHAR(22) NOT NULL,
-      `added_byid` VARCHAR(22),
-      `createdAtDate` date NOT NULL,
-      `removeAtDate` date NOT NULL,
-      PRIMARY KEY (`userid`,`roleid`)
+  client.query('
+    CREATE TABLE IF NOT EXISTS insurance (     
+      userid VARCHAR(22) NOT NULL,
+      roleid VARCHAR(22) NOT NULL,
+      added_byid VARCHAR(22),
+      createdAtDate date NOT NULL,
+      removeAtDate date NOT NULL,
+      PRIMARY KEY (userid,roleid)
     )'
   );
 });
-*/
 //var http = require('http'); http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/plain'}); res.send('it is running\n'); }).listen(process.env.PORT || 5000);
 bot.login(process.env.USER_TOKEN);
