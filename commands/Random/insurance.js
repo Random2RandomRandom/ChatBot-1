@@ -69,4 +69,4 @@ class addTempRoleCommand extends commando.Command {
     }
 }
 
-module.exports = addTempRoleCommand;
+module.exports = addTempRole;
