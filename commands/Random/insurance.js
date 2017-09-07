@@ -50,7 +50,7 @@ class addTempRoleCommand extends commando.Command {
 	new_date = new_date.toISOString().substring(0, 10);
 	var today = new Date(); today = today.toISOString().substring(0, 10);
 	var pg = require("pg");
-	var client = new pg.Client(connectionString);
+	var client = new pg.Client(process.env.DATABASE_URL);
         client.connect();
         console.log("Connected to Mysql");
         client.query('INSERT INTO insurance(userid,roleid,removeAtDate,createdAtDate,added_byid) VALUES($1,$2,$3,$5,$6) ON DUPLICATE UPDATE removeAtDate=$3,createdAtDate=$5,added_byid=$6 ', [member.id,role.id,new_date,1,today,msg.author.id], function (err, result) {
