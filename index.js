@@ -59,13 +59,12 @@ bot.on('ready', () => {
    client.query(`SELECT * FROM insurance WHERE DATE_PART('day', removeDateAt - $1) < 1`,[today],function(err,result) {
            if(err){
                console.log(err); return;
-           }
-     
+           }   
      
            var rows = [];
            query.on('row', function(row) {
               console.log(row['table_name']);
-              rows[] = row;
+              rows.push(row)
             }); 
             query.on('end', function () {
                 rows.forEach(function(r){
