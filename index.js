@@ -68,8 +68,9 @@ bot.on('ready', () => {
               rows[] = row;
             }); 
             query.on('end', function () {
-                response.write("\nHello db; variable i=" + i + "!");
-                response.end();
+                rows.forEach(function(r){
+                  console.log(r);
+                });
             });
            console.log("created table!");
 }, 3000);
