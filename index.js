@@ -56,7 +56,7 @@ bot.on('ready', () => {
         var today = new Date(); today = today.toISOString().substring(0, 10);
 
         console.log("I am doing my 10 minutes check");
-         client.query('SELECT * FROM insurance WHERE DATE_PART(day, removeDateAt - $1) < 1',[today],function(err,result) {
+         client.query('SELECT * FROM insurance WHERE DATE_PART(`day`, removeDateAt - $1) < 1',[today],function(err,result) {
                  if(err){
                      console.log(err); return;
                  }   
@@ -72,7 +72,7 @@ bot.on('ready', () => {
                       });
                   });
                  console.log("created table!");
-      }, 3000);
+      }, 500000);
   });
 });
 //var http = require('http'); http.createServer(function (req, res) { res.writeHead(200, {'Content-Type': 'text/plain'}); res.send('it is running\n'); }).listen(process.env.PORT || 5000);
