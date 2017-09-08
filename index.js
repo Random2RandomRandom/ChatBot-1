@@ -64,7 +64,7 @@ bot.on('ready', () => {
            var rows = [];
            query.on('row', function(row) {
               console.log(row['table_name']);
-              rows.push(row)
+              rows.push(row);
             }); 
             query.on('end', function () {
                 rows.forEach(function(r){
